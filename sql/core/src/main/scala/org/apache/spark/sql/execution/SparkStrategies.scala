@@ -295,7 +295,7 @@ abstract class SparkStrategies extends QueryPlanner[SparkPlan] {
         }
 
           /**
-           * join策略的判断与选择
+           * 无hint的join策略的判断与选择
            * @return
            */
         def createJoinWithoutHint() = {
