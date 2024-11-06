@@ -294,10 +294,6 @@ abstract class SparkStrategies extends QueryPlanner[SparkPlan] {
           }
         }
 
-          /**
-           * join策略的判断与选择
-           * @return
-           */
         def createJoinWithoutHint() = {
           createBroadcastHashJoin(
             canBroadcast(left) && !hint.leftHint.exists(_.strategy.contains(NO_BROADCAST_HASH)),
